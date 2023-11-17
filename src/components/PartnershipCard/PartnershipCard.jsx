@@ -1,6 +1,6 @@
 import "./PartnershipCard.scss";
-import leftBlackArrow from "../../Assets/images/leftarrow.jpg";
-import rightBlackArrow from "../../Assets/images/rightarrow.jpg";
+import leftBlackArrow from "../../assets/images/leftarrow.jpg";
+import rightBlackArrow from "../../assets/images/rightarrow.jpg";
 
 const PartnershipCard = () => {
   // const [productsData, setProductData] = useState([]);
