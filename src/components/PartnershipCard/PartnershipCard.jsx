@@ -1,6 +1,7 @@
 import "./PartnershipCard.scss";
 import leftBlackArrow from "../../assets/images/leftarrow.jpg";
 import rightBlackArrow from "../../assets/images/rightarrow.jpg";
+import axios from 'axios';
 
 const PartnershipCard = ({merchant}) => {
   // const [productsData, setProductData] = useState([]);
@@ -17,6 +18,16 @@ const PartnershipCard = ({merchant}) => {
   //   getProductsData();
   //   // console.log(productsData);
   // }, []);
+
+  const addPartner = async () => {
+    let newPartnership = {
+      "status": "Pending",
+      "name": `New Partnership with ${merchant.name}`,
+      "merchant_ids": [3, merchant.id]
+    }
+    const response = await axios.post("http://3.20.237.64:80/partnerships", newPartnership);
+    console.log(response);
+  }
 
   return (
     <section className="partnership-card">
@@ -64,7 +75,7 @@ const PartnershipCard = ({merchant}) => {
         </div>
 
         <div className="partnership-card__btn-container">
-          <button className="partnership-card__btn">Select</button>
+          <button className="partnership-card__btn" onClick={()=>addPartner()}>Offer Partnership</button>
         </div>
       </div>
     </section>

@@ -6,7 +6,7 @@
 .partnership-card {
   margin-left: 24px;
   margin-top: 24px;
-  width: 850px;
+  width: 1200px;
   padding: 1rem 0;
   border: 1px solid;
   border-radius: 10px;
@@ -88,7 +88,7 @@
     font-size: 16px;
   }
   &__categoryButton {
-    background-color: #D9D9D9;
+    background-color: #D9D9D9; 
     text-align: center;
     padding: 0.3rem;
     border-radius: 50px;
@@ -109,5 +109,6 @@
     border-radius: 5px;
     border: none;
     height: 30px;
+    width: 170px;
   }
 }
