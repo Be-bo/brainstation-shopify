@@ -1,7 +1,7 @@
-import logo from "../../assets/logo/shopifyLogo.svg";
-import notificationIcon from "../../assets/icons/notificationIcon.svg";
-import searchIcon from "../../assets/icons/searchIcon.svg";
-import profileButton from "../../assets/icons/mystoreButton.svg";
+// import logo from "../../assets/logo/shopifyLogo.svg";
+// import notificationIcon from "../../assets/icons/notificationIcon.svg";
+// import searchIcon from "../../assets/icons/searchIcon.svg";
+// import profileButton from "../../assets/icons/mystoreButton.svg";
 import homeIcon from "../../assets/icons/Home icon.svg";
 import orderIcon from "../../assets/icons/orders icon.svg";
 import partnershipIcon from "../../assets/icons/partnership icon.svg";
@@ -15,37 +15,11 @@ import arrowIcon from "../../assets/icons/arrow icon.svg";
 import onlinestoreIcon from "../../assets/icons/Online store.svg";
 import pointofsaleIcon from "../../assets/icons/point of sale icon.svg";
 import addappsIcon from "../../assets/icons/add app icon.svg";
-import "./Navbar.scss";
+import "./Leftbar.scss";
 
-function Navbar() {
+function Leftbar() {
   return (
     <>
-      <div className="topbar">
-        <img className="topbar__logo" src={logo} alt="shopify logo"></img>
-        <div className="topbar__searchbox">
-          <img
-            className="topbar__searchicon"
-            alt="search icon"
-            src={searchIcon}
-          ></img>
-          <input
-            type="search"
-            placeholder="Search"
-            className="topbar__searchinput"
-          ></input>
-        </div>
-        <img
-          className="topbar__notificationicon"
-          alt="notification icon"
-          src={notificationIcon}
-        ></img>
-        <img
-          className="topbar__profileButton"
-          alt="profile button"
-          src={profileButton}
-        ></img>
-      </div>
-
       <div className="leftbar">
         <ul className="leftbar__list1">
           <li className="leftbar__listoption">
@@ -165,7 +139,7 @@ function Navbar() {
     </>
   );
 }
-export default Navbar;
+export default Leftbar;
 
 /* <div className="topbar">
 <img className="topbar__logo" src={logo} alt="shopify logo"></img>

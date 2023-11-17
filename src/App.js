@@ -2,14 +2,20 @@
 import { Routes, Route, BrowserRouter} from 'react-router-dom';
 import Partnerships from './components/Partnerships';
 import AddPartnership from './components/AddPartnerships';
-import Navbar from './components/Navbar/Navbar'
+import Topbar from './components/Topbar/Topbar';
+import Leftbar from './components/Leftbar/Leftbar';
+import "./App.scss"
 
 function App() {
   return (
     <div>
        <BrowserRouter>
         <div className='app'>
-          <Navbar/>
+          <Topbar/>
+          <div className='mainbody'>
+            <Leftbar/>
+            <div className='mainbody__content'></div>
+          </div>
         <Routes>
           <Route path="/" element={<Partnerships />}></Route>
           <Route path="/add-partnership" element={<AddPartnership />}></Route>
