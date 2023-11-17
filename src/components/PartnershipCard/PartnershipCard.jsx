@@ -23,7 +23,7 @@ const PartnershipCard = ({merchant}) => {
     let newPartnership = {
       "status": "Pending",
       "name": `New Partnership with ${merchant.name}`,
-      "merchant_ids": [3, merchant.id]
+      "merchant_ids": [3, merchant.merchant_id]
     }
     const response = await axios.post("http://3.20.237.64:80/partnerships", newPartnership);
     console.log(response);
