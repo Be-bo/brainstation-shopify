@@ -11,18 +11,43 @@ import { useState, useEffect } from "react";
 function AddPartnerships() {
   const [categories, setCategories] = useState();
   const [selectedCategory, setSelectedCategory] = useState();
+  const [merchants, setMerchants] = useState();
+  const [currentMerchants, setCurrentMerchants] = useState();
+  const [selectedMerchant, setSelectedMerchant] = useState();
+
+  // const [productData, setProductData] = useState([]);
 
   useEffect(() => {
-    async function fetchCategories() {
-      const response = await axios.get("http://3.20.237.64:80/categories");
-      setCategories(response.data);
+    async function fetchData() {
+
+      const selectedMerchantResponse = await axios.get("http://3.20.237.64:80/merchants/3");
+      setSelectedMerchant(selectedMerchantResponse.data);
+
+      const categoryResponse = await axios.get("http://3.20.237.64:80/categories");
+      setCategories(categoryResponse.data);
+
+      const merchantsResponse = await axios.get("http://3.20.237.64:80/merchants");
+      setMerchants(merchantsResponse.data);
+      
+      let temp = [];
+      for(let i = 0; i<selectedMerchantResponse.data.partnership_suggestions.length; i++){
+        temp.push(merchantsResponse.data[selectedMerchantResponse.data.partnership_suggestions[i]]);
+      }
+
+      setCurrentMerchants(temp);
+
     }
-    fetchCategories();
-  });
+    fetchData();
+  }, []);
 
   const handleCategoryChange = (event) => {
     const { value } = event.target;
-    // TODO: pull appropriate merchants
+    setSelectedCategory(value);
+    let temp = [];
+    for(let i = 0; i<merchants.length; i++){
+      if(merchants[i].categories.includes(value)) temp.push(merchants[i]);
+    }
+    setCurrentMerchants(temp);
   }
 
 
@@ -66,7 +91,9 @@ function AddPartnerships() {
               </select>
             </div>
             <div className="mainbody__title">Suggested Merchant</div>
-            <PartnershipCard />
+            {currentMerchants?.map((merchant, index) => (
+              <PartnershipCard merchant={merchant} />
+            ))}
           </div>
         </div>
       </div>
