@@ -82,15 +82,15 @@ function Leftbar() {
             ></img>
             Discounts
           </li>
-          <li className="leftbar__listoption">
-            <img
-              src={partnershipIcon}
-              alt="partnership icon"
-              className="leftbar__icon"
-            ></img>
-            Partnerships
-          </li>
         </ul>
+        <li className="leftbar__listoption partnership">
+          <img
+            src={partnershipIcon}
+            alt="partnership icon"
+            className="leftbar__icon"
+          ></img>
+          Partnerships
+        </li>
         <ul className="leftbar__list2">
           <div className="leftbar__listtitle">
             Sales channels{" "}
