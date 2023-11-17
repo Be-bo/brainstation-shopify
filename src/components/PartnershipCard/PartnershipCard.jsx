@@ -2,7 +2,7 @@ import "./PartnershipCard.scss";
 import leftBlackArrow from "../../assets/images/leftarrow.jpg";
 import rightBlackArrow from "../../assets/images/rightarrow.jpg";
 
-const PartnershipCard = () => {
+const PartnershipCard = ({merchant}) => {
   // const [productsData, setProductData] = useState([]);
   // //get single prodct data from backend
 
@@ -23,41 +23,43 @@ const PartnershipCard = () => {
       <div className="partnership-card__wrapper">
         <div className="partnership-card__container-left">
           <div className="partnership-card__img-container">
-            <img className="partnership-card__img" src="" alt="Logo" />
+            <img className="partnership-card__img" src={merchant.logo} alt="Logo" />
           </div>
           <div className="partnership-card__name-container">
-            <p className="partnership-card__text">Shopify Partners name</p>
-            <p className="partnership-card__text">Description</p>
+            <p className="partnership-card__name">{merchant.name}</p>
+            <p className="partnership-card__description">{merchant.description}</p>
           </div>
         </div>
         <div className="partnership-card__container-right">
-          <div className="partnership-card__arrow-container">
-            <img
-              className="partnership-card__arrow"
-              src={leftBlackArrow}
-              alt="leftArrow"
-            />
-          </div>
-          <div className="partnership-card__product-container">
-            <img
-              className="partnership-card__product-img"
-              src=""
-              alt="product img"
-            />
-          </div>
-          <div className="partnership-card__description-container">
-            <p className="partnership-card__text">Product name</p>
-            <p className="partnership-card__text">Product description</p>
-            <p className="partnership-card__text partnership-card__text--category">
-              Category
-            </p>
-          </div>
-          <div className="partnership-card__arrow-container">
-            <img
-              className="partnership-card__arrow"
-              src={rightBlackArrow}
-              alt="leftArrow"
-            />
+          <div className="partnership-card__background">
+            <div className="partnership-card__arrow-container">
+              <img
+                className="partnership-card__arrow"
+                src={leftBlackArrow}
+                alt="leftArrow"
+              />
+            </div>
+            <div className="partnership-card__product-container">
+              <img
+                className="partnership-card__product-img"
+                src=""
+                alt="product img"
+              />
+            </div>
+            <div className="partnership-card__description-container">
+              <p className="partnership-card__productName">Product Name</p>
+              <p className="partnership-card__description">
+                product description
+              </p>
+              <p className="partnership-card__categoryButton">Category</p>
+            </div>
+            <div className="partnership-card__arrow-container">
+              <img
+                className="partnership-card__arrow"
+                src={rightBlackArrow}
+                alt="leftArrow"
+              />
+            </div>
           </div>
         </div>
 
