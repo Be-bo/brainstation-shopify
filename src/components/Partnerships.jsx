@@ -2,8 +2,26 @@
 import Topbar from "./Topbar/Topbar";
 import Leftbar from "./Leftbar/Leftbar";
 import "../components/Partnerships.scss";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Partnerships() {
+  const { id } = useParams();
+  const [partnershipData, setMerchantData] = useState([]);
+  const [productData, setProductData] = useState();
+
+  useEffect(() => {
+    const getMerchantData = async () => {
+      const response = await axios.get("http://3.20.237.64/partnerships/3");
+      setMerchantData(response.data);
+      // console.log(response.data);
+    };
+    getMerchantData();
+  }, []);
+
   return (
     <>
       <Topbar></Topbar>
@@ -14,21 +32,27 @@ function Partnerships() {
           <div className="mainbody__box">
             <div className="mainbody__header-container">
               <h2 className="mainbody__box-header">Active</h2>
-              <button className="mainbody__button">Add Partner</button>
+              <Link to="/add-partnership">
+                <button className="mainbody__button">Add Partner</button>
+              </Link>
             </div>
             <div className="mainbody__info-container">
               <div className="mainbody__info-row1">
                 <ul className="mainbody__info-list">
                   <li className="mainbody__list-item">Store</li>
-                  <li className="mainbody__list-item">Product</li>
-                  <li className="mainbody__list-item">Product Type</li>
                   <li className="mainbody__list-item">Status</li>
                 </ul>
                 <ul className="mainbody__product-list">
-                  <li className="mainbody__product-item">Store Name</li>
-                  <li className="mainbody__product-item">Products</li>
-                  <li className="mainbody__product-item">Type</li>
-                  <li className="mainbody__product-item">jjsjsjs</li>
+                  {partnershipData?.map((item, index) => (
+                    <React.Fragment key={index}>
+                      <li className="mainbody__product-item">
+                        <p className="mainbody__itemname">{item.name}</p>
+                        <p className="mainbody__itemstatus">{item.status}</p>
+                      </li>
+                    </React.Fragment>
+                  ))}
+                  {/* {merchantData.map((item, index) => ( */}
+                  {/* <li className="mainbody__product-item" key={index}> */}
                 </ul>
               </div>
             </div>

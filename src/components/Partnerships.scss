@@ -14,7 +14,7 @@
   &__info-list {
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     background-color: #ebebeb;
     height: 4rem;
     align-items: center;
@@ -34,5 +34,25 @@
     display: flex;
     justify-content: space-around;
     padding-inline-start: 0;
+    flex-direction: column;
+  }
+  &__product-item {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2.5rem;
+    border-bottom: 2px solid #ebebeb;
+  }
+  &__list-item {
+    width: 500px;
+  }
+  &__itemname {
+    width: 500px;
+  }
+  &__itemstatus {
+    padding: 4px 10px 4px;
+    border-radius: 10px;
+    display: flex;
+    align-items: baseline;
+    border: 1px solid black;
   }
 }
