@@ -1,9 +1,12 @@
-const Partnerships = () => {
-  return (
-    <section className="shop">
-      ¥<p>test</p>
-    </section>
-  );
-};
 
-export default Partnerships;
+import React from 'react'
+
+function Partnerships() {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export default Partnerships
