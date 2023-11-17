@@ -1,67 +1,129 @@
-import React from "react";
-// JSX
-import HeroSlider, { Slide, Nav } from "hero-slider";
+import "./slide.scss";
+import { useState } from "react";
+import leftBlackArrow from "../../Assets/images/leftarrow.jpg";
+import rightBlackArrow from "../../Assets/images/rightarrow.jpg";
 
-// Images
-const bogliasco = "https://i.imgur.com/Gu5Cznz.jpg";
-const countyClare = "https://i.imgur.com/idjXzVQ.jpg";
-const craterRock = "https://i.imgur.com/8DYumaY.jpg";
-const giauPass = "https://i.imgur.com/8IuucQZ.jpg";
+const PartnershipCard = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const products = [
+    { name: "Product 1", description: "Description 1", category: "Category 1" },
+    { name: "Product 2", description: "Description 2", category: "Category 2" },
+  ];
 
-const BasicSlider = () => {
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % products.length);
+  };
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + products.length) % products.length);
+  };
+  // const [productsData, setProductData] = useState([]);
+  // //get single prodct data from backend
+
+  // // get all productsData from Json file on frontend
+  // // do I need a truth of data on ShoppingPage?
+  // useEffect(() => {
+  //   const getProductsData = async () => {
+  //     const response = await axios.get(`http://localhost:8085/shopping`);
+  //     setProductData(response.data);
+  //     // setSelectedProduct(response.data[0]);
+  //   };
+  //   getProductsData();
+  //   // console.log(productsData);
+  // }, []);
+
   return (
-    <HeroSlider
-      slidingAnimation="left_to_right"
-      orientation="horizontal"
-      initialSlide={1}
-      onBeforeChange={(previousSlide, nextSlide) =>
-        console.log("onBeforeChange", previousSlide, nextSlide)
-      }
-      onChange={(nextSlide) => console.log("onChange", nextSlide)}
-      onAfterChange={(nextSlide) => console.log("onAfterChange", nextSlide)}
-      style={{
-        backgroundColor: "rgba(0, 0, 0, 0.33)",
-      }}
-      settings={{
-        slidingDuration: 250,
-        slidingDelay: 100,
-        shouldAutoplay: true,
-        shouldDisplayButtons: true,
-        autoplayDuration: 5000,
-        height: "100vh",
-      }}
-    >
-      <Slide
-        background={{
-          backgroundImage: giauPass,
-          backgroundAttachment: "fixed",
-        }}
-      />
+    <section className="partnership-card">
+      <div className="partnership-card__wrapper">
+        <div className="partnership-card__container-left">
+          <div className="partnership-card__img-container">
+            <img className="partnership-card__img" src="" alt="Logo" />
+          </div>
+          <div className="partnership-card__name-container">
+            <p className="partnership-card__text">Shopify Partners name</p>
+            <p className="partnership-card__text">Description</p>
+          </div>
+        </div>
+        <div className="partnership-card__container-right partnership-card__slide">
+          <div className="partnership-card__arrow-container">
+            <img
+              onClick={prevSlide}
+              className="partnership-card__arrow"
+              src={leftBlackArrow}
+              alt="leftArrow"
+            />
+          </div>
+          <div className="partnership-card__product-container">
+            <img
+              className="partnership-card__product-img"
+              src=""
+              alt="product img"
+            />
+          </div>
+          <div className="partnership-card__description-container">
+            <p className="partnership-card__text">
+              {products[currentSlide].name}
+            </p>
+            <p className="partnership-card__text">Product description</p>
+            <p className="partnership-card__text partnership-card__text--category">
+              Category
+            </p>
+          </div>
+          <div
+            onClick={nextSlide}
+            className="partnership-card__arrow-container"
+          >
+            <img
+              className="partnership-card__arrow"
+              src={rightBlackArrow}
+              alt="leftArrow"
+            />
+          </div>
+        </div>
 
-      <Slide
-        background={{
-          backgroundImage: bogliasco,
-          backgroundAttachment: "fixed",
-        }}
-      />
-
-      <Slide
-        background={{
-          backgroundImage: countyClare,
-          backgroundAttachment: "fixed",
-        }}
-      />
-
-      <Slide
-        background={{
-          backgroundImage: craterRock,
-          backgroundAttachment: "fixed",
-        }}
-      />
-
-      <Nav />
-    </HeroSlider>
+        <div className="partnership-card__btn-container">
+          <button className="partnership-card__btn">Select</button>
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default BasicSlider;
+export default PartnershipCard;
+
+// <div className="partnership-card__container-right">
+//   {products.map((product, index) => (
+//     <div
+//       key={index}
+//       className={`partnership-card__slide ${index === currentSlide ? 'partnership-card__slide--visible' : ''}`}
+//     >
+//       <div className="partnership-card__arrow-container">
+//         <img
+//           onClick={prevSlide}
+//           className="partnership-card__arrow"
+//           src={leftBlackArrow}
+//           alt="leftArrow"
+//         />
+//       </div>
+//       <div className="partnership-card__product-container">
+//         <img
+//           className="partnership-card__product-img"
+//           src={product.image} // 製品の画像URLを適切に設定してください
+//           alt="product img"
+//         />
+//       </div>
+//       <div className="partnership-card__description-container">
+//         <p className="partnership-card__text">{product.name}</p>
+//         <p className="partnership-card__text">{product.description}</p>
+//         <p className="partnership-card__text partnership-card__text--category">{product.category}</p>
+//       </div>
+//       <div className="partnership-card__arrow-container">
+//         <img
+//           onClick={nextSlide}
+//           className="partnership-card__arrow"
+//           src={rightBlackArrow}
+//           alt="rightArrow"
+//         />
+//       </div>
+//     </div>
+//   ))}
+// </div>

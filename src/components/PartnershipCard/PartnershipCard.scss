@@ -3,6 +3,20 @@
   padding: 0;
 }
 
+// .partnership-card__slide {
+//   position: absolute;
+//   width: 100%;
+//   transition: transform 0.5s ease;
+
+//   &:nth-child(1) {
+//     transform: translateX(0);
+//   }
+//   &:nth-child(2) {
+//     transform: translateX(100%);
+//   }
+//   // さらにスライドがある場合は追加
+// }
+
 .partnership-card {
   padding: 1rem 0;
   border: 1px solid;
@@ -41,6 +55,8 @@
     justify-content: center;
     align-items: center;
     border-right: 1px solid black;
+    overflow: hidden;
+    position: relative;
   }
 
   &__arrow {
