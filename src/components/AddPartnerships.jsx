@@ -4,9 +4,11 @@ import Leftbar from "./Leftbar/Leftbar";
 import PartnershipCard from "./PartnershipCard/PartnershipCard";
 import searchIcon from "../assets/icons/searchIcon.svg";
 import filterIcon from "../assets/icons/filterIcon.svg";
-import axios from 'axios';
+import axios from "axios";
 import "../components/AddPartnerships.scss";
+import backButton from "../assets/icons/backbutton.svg";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function AddPartnerships() {
   const [categories, setCategories] = useState();
@@ -19,23 +21,35 @@ function AddPartnerships() {
 
   useEffect(() => {
     async function fetchData() {
-
-      const selectedMerchantResponse = await axios.get("http://3.20.237.64:80/merchants/3");
+      const selectedMerchantResponse = await axios.get(
+        "http://3.20.237.64:80/merchants/3"
+      );
       setSelectedMerchant(selectedMerchantResponse.data);
 
-      const categoryResponse = await axios.get("http://3.20.237.64:80/categories");
+      const categoryResponse = await axios.get(
+        "http://3.20.237.64:80/categories"
+      );
       setCategories(categoryResponse.data);
 
-      const merchantsResponse = await axios.get("http://3.20.237.64:80/merchants");
+      const merchantsResponse = await axios.get(
+        "http://3.20.237.64:80/merchants"
+      );
       setMerchants(merchantsResponse.data);
-      
+
       let temp = [];
-      for(let i = 0; i<selectedMerchantResponse.data.partnership_suggestions.length; i++){
-        temp.push(merchantsResponse.data[selectedMerchantResponse.data.partnership_suggestions[i]]);
+      for (
+        let i = 0;
+        i < selectedMerchantResponse.data.partnership_suggestions.length;
+        i++
+      ) {
+        temp.push(
+          merchantsResponse.data[
+            selectedMerchantResponse.data.partnership_suggestions[i]
+          ]
+        );
       }
 
       setCurrentMerchants(temp);
-
     }
     fetchData();
   }, []);
@@ -44,13 +58,11 @@ function AddPartnerships() {
     const { value } = event.target;
     setSelectedCategory(value);
     let temp = [];
-    for(let i = 0; i<merchants.length; i++){
-      if(merchants[i].categories.includes(value)) temp.push(merchants[i]);
+    for (let i = 0; i < merchants.length; i++) {
+      if (merchants[i].categories.includes(value)) temp.push(merchants[i]);
     }
     setCurrentMerchants(temp);
-  }
-
-
+  };
 
   return (
     <div>
@@ -58,7 +70,16 @@ function AddPartnerships() {
       <div className="mainbody">
         <Leftbar></Leftbar>
         <div className="mainbody__content">
-          <div className="mainbody__heading">Add New Partners</div>
+          <div className="mainbody__topgroup">
+            <Link to="/">
+              <img
+                src={backButton}
+                alt="back button"
+                className="mainbody__backbutton"
+              ></img>
+            </Link>
+            <div className="mainbody__heading">Add New Partners</div>
+          </div>
           <div className="mainbody__box">
             <div className="mainbody__searchbox">
               <div className="mainbody__searchgroup">
@@ -82,11 +103,13 @@ function AddPartnerships() {
               <select
                 className="newInv__item-input"
                 value={selectedCategory}
-                name='category'
+                name="category"
                 onChange={handleCategoryChange}
               >
                 {categories?.map((category, index) => (
-                  <option key={category} value={category}>{category}</option>
+                  <option key={category} value={category}>
+                    {category}
+                  </option>
                 ))}
               </select>
             </div>
