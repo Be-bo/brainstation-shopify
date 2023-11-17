@@ -4,6 +4,8 @@
 }
 
 .partnership-card {
+  margin-left: 24px;
+  width: 850px;
   padding: 1rem 0;
   border: 1px solid;
   border-radius: 10px;
@@ -23,6 +25,13 @@
   &__name-container {
     padding-left: 1rem;
   }
+  &__name {
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    padding-bottom: 16px;
+  }
   &__img-container {
     display: flex;
     flex-direction: column;
@@ -33,9 +42,17 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: green;
+    background-color:  #D9D9D9;
   }
+  &__background {
+    background-color: white;
+    display: flex;
+    border-radius: 12px;
+    padding: 10px 10px 10px 10px;
+    margin-right: 16px;
+    align-items: center;
 
+  }
   &__container-right {
     display: flex;
     justify-content: center;
@@ -57,18 +74,26 @@
   &__product-img {
     width: 100px;
     height: 100px;
-    background-color: green;
+    background-color: #D9D9D9;
   }
   &__description-container {
     padding-left: 1rem;
     display: flex;
     flex-direction: column;
   }
-  &__text--category {
-    background-color: cadetblue;
+  &__productName {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  &__categoryButton {
+    background-color: #D9D9D9;
     text-align: center;
     padding: 0.3rem;
     border-radius: 50px;
+    margin-top: 16px;
+    color: black;
+    border: 1px solid black;
   }
   &__btn-container {
     display: flex;
@@ -79,8 +104,9 @@
   &__btn {
     background-color: black;
     color: white;
-    padding: 0.2rem 1.3rem;
+    padding: 0.5rem 1.8rem;
     border-radius: 5px;
     border: none;
+    height: 30px;
   }
 }
