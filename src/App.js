@@ -1,18 +1,20 @@
-import logo from './logo.svg';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { Routes, Route, BrowserRouter} from 'react-router-dom';
 import Partnerships from './components/Partnerships';
 import AddPartnership from './components/AddPartnerships';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <div>
-      <Router>
+       <BrowserRouter>
+        <div className='app'>
+          <Navbar/>
         <Routes>
           <Route path="/" element={<Partnerships />}></Route>
           <Route path='/add-partnership' element={<AddPartnership />}></Route>
         </Routes>
-      </Router>
-      
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
