@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+}
+.navbar {
+  height: 4rem;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.193);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo {
+  height: 2rem;
+}
+.userprofile {
+  height: 2rem;
+  background-color: black;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-weight: 600;
+  width: 6rem;
+}
+.search {
+  height: 1.5rem;
+  width: 15rem;
+  border-radius: 20px;
+  border: 1px solid darkgrey;
+  padding-left: 16px;
+}
+.main-container {
+  display: flex;
+}
+.sidebar__img {
+  width: 25vw;
+}
+.content {
+  padding-left: 3rem;
+  width: 100%;
+  background-color: lightgray;
+
+  .header {
+    font-size: 18px;
+  }
+
+  &__sub2 {
+    background-color: white;
+    height: 80vh;
+    width: 85%;
+    padding: 2rem;
+  }
+  &__search {
+    width: 98%;
+    border-radius: 8px;
+    border: 1px solid darkgray;
+    padding-left: 10px;
+  }
+  &__header {
+    font-size: 1rem;
+  }
+}
