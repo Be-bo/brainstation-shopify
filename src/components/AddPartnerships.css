@@ -9,6 +9,13 @@
   margin-left: 24px;
   margin-top: 24px;
 }
+.mainbody__title {
+  margin-left: 24px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 16px;
+}
 .mainbody__box {
   width: 80vw;
   height: 85vh;
@@ -17,4 +24,28 @@
   margin-left: 24px;
   margin-right: 24px;
   margin-top: 24px;
+  padding-top: 24px;
+}
+.mainbody__searchbox {
+  margin-left: 24px;
+  width: 600px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 10px 4px 10px;
+}
+.mainbody__searchgroup {
+  display: flex;
+  align-items: center;
+}
+.mainbody__searchinput {
+  border: none;
+  background-color: #FFFFFF;
+}
+.mainbody__searchicon {
+  color: #B5B5B5;
+  padding-right: 10px;
 }/*# sourceMappingURL=AddPartnerships.css.map */
