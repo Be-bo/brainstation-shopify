@@ -1,14 +1,18 @@
 import "./slide.scss";
 import { useState } from "react";
-import leftBlackArrow from "../../Assets/images/leftarrow.jpg";
-import rightBlackArrow from "../../Assets/images/rightarrow.jpg";
+import leftBlackArrow from "../../assets/images/leftarrow.jpg";
+import rightBlackArrow from "../../assets/images/rightarrow.jpg";
+import merchantsData from "../../Data/merchants.json";
+import { useEffect } from "react";
 
-const PartnershipCard = () => {
+const PartnershipCard = ({ merchant, products }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const products = [
-    { name: "Product 1", description: "Description 1", category: "Category 1" },
-    { name: "Product 2", description: "Description 2", category: "Category 2" },
-  ];
+  //merchant data
+  // console.log("props", props);
+
+  // const [merchantData, setMerchantData] = useState(merchantsData);
+
+  // const merchant = props.products;
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % products.length);
@@ -39,8 +43,8 @@ const PartnershipCard = () => {
             <img className="partnership-card__img" src="" alt="Logo" />
           </div>
           <div className="partnership-card__name-container">
-            <p className="partnership-card__text">Shopify Partners name</p>
-            <p className="partnership-card__text">Description</p>
+            <p className="partnership-card__text">{merchant.name}</p>
+            <p className="partnership-card__text">{merchant.description}</p>
           </div>
         </div>
         <div className="partnership-card__container-right partnership-card__slide">
@@ -61,7 +65,7 @@ const PartnershipCard = () => {
           </div>
           <div className="partnership-card__description-container">
             <p className="partnership-card__text">
-              {products[currentSlide].name}
+              {products[currentSlide] ? products[currentSlide].name : null}
             </p>
             <p className="partnership-card__text">Product description</p>
             <p className="partnership-card__text partnership-card__text--category">

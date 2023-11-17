@@ -1,0 +1,289 @@
+[
+  {
+    "name": "Pruning Shears",
+    "product_id": 1,
+    "merchant_id": 1,
+    "description": "Efficient and durable pruning shears for precise gardening and trimming tasks.",
+    "image": ""
+  },
+  {
+    "name": "Outdoor Fountain",
+    "product_id": 2,
+    "merchant_id": 1,
+    "description": "Decorative outdoor fountain to add elegance and serenity to your garden.",
+    "image": ""
+  },
+  {
+    "name": "Rose Bush Seeds",
+    "product_id": 3,
+    "merchant_id": 1,
+    "description": "High-quality rose bush seeds for cultivating vibrant and fragrant roses.",
+    "image": ""
+  },
+  {
+    "name": "Plush Pet Bed",
+    "product_id": 4,
+    "merchant_id": 2,
+    "description": "Luxurious and comfortable plush bed to pamper your furry friend with a cozy retreat.",
+    "image": ""
+  },
+  {
+    "name": "Interactive Dog Toy",
+    "product_id": 5,
+    "merchant_id": 2,
+    "description": "Engaging and interactive toy to keep your dog entertained and active.",
+    "image": ""
+  },
+  {
+    "name": "Organic Cat Treats",
+    "product_id": 6,
+    "merchant_id": 2,
+    "description": "Wholesome and organic treats to delight your feline companion.",
+    "image": ""
+  },
+  {
+    "name": "Protein Powder",
+    "product_id": 7,
+    "merchant_id": 3,
+    "description": "High-quality protein powder blend for post-workout recovery and muscle growth.",
+    "image": ""
+  },
+  {
+    "name": "Yoga Mat",
+    "product_id": 8,
+    "merchant_id": 3,
+    "description": "Premium yoga mat for comfortable and stable practice sessions.",
+    "image": ""
+  },
+  {
+    "name": "Aromatherapy Essential Oils",
+    "product_id": 9,
+    "merchant_id": 3,
+    "description": "Aromatic essential oils for relaxation and creating a calming atmosphere.",
+    "image": ""
+  },
+  {
+    "name": "Wireless Earbuds",
+    "product_id": 10,
+    "merchant_id": 4,
+    "description": "Sleek and high-quality wireless earbuds for immersive audio experiences.",
+    "image": ""
+  },
+  {
+    "name": "Smart Home Assistant",
+    "product_id": 11,
+    "merchant_id": 4,
+    "description": "Intelligent home assistant to streamline daily tasks and control smart devices.",
+    "image": ""
+  },
+  {
+    "name": "High-Resolution Webcam",
+    "product_id": 12,
+    "merchant_id": 4,
+    "description": "Crystal-clear high-resolution webcam for video conferencing and streaming.",
+    "image": ""
+  },
+  {
+    "name": "Cocktail Dress",
+    "product_id": 13,
+    "merchant_id": 5,
+    "description": "Elegant and fashionable cocktail dress for special occasions and events.",
+    "image": ""
+  },
+  {
+    "name": "Statement Necklace",
+    "product_id": 14,
+    "merchant_id": 5,
+    "description": "Eye-catching statement necklace to accentuate your style and attire.",
+    "image": ""
+  },
+  {
+    "name": "Leather Handbag",
+    "product_id": 15,
+    "merchant_id": 5,
+    "description": "Classy and versatile leather handbag for everyday use and sophistication.",
+    "image": ""
+  },
+  {
+    "name": "Bamboo Cutting Board Set",
+    "product_id": 16,
+    "merchant_id": 6,
+    "description": "Durable and eco-friendly bamboo cutting board set for kitchen convenience.",
+    "image": ""
+  },
+  {
+    "name": "Reusable Stainless Steel Straws",
+    "product_id": 17,
+    "merchant_id": 6,
+    "description": "Eco-friendly and reusable stainless steel straws for sustainable sipping.",
+    "image": ""
+  },
+  {
+    "name": "Organic Coconut Oil Soap",
+    "product_id": 18,
+    "merchant_id": 6,
+    "description": "Nourishing and organic coconut oil soap for gentle and moisturizing cleansing.",
+    "image": ""
+  },
+  {
+    "name": "Camping Tent",
+    "product_id": 19,
+    "merchant_id": 7,
+    "description": "Durable and weather-resistant camping tent for outdoor adventures.",
+    "image": ""
+  },
+  {
+    "name": "Hiking Backpack",
+    "product_id": 20,
+    "merchant_id": 7,
+    "description": "Spacious and ergonomic hiking backpack for comfortable trekking.",
+    "image": ""
+  },
+  {
+    "name": "Portable Water Purifier",
+    "product_id": 21,
+    "merchant_id": 7,
+    "description": "Compact and efficient portable water purifier for clean drinking water.",
+    "image": ""
+  },
+  {
+    "name": "Hand-Painted Ceramic Mug",
+    "product_id": 22,
+    "merchant_id": 8,
+    "description": "Unique and hand-painted ceramic mug for delightful tea or coffee moments.",
+    "image": ""
+  },
+  {
+    "name": "Handcrafted Wooden Jewelry Box",
+    "product_id": 23,
+    "merchant_id": 8,
+    "description": "Exquisite handcrafted wooden jewelry box to store and display accessories.",
+    "image": ""
+  },
+  {
+    "name": "Handwoven Throw Blanket",
+    "product_id": 24,
+    "merchant_id": 8,
+    "description": "Warm and cozy handwoven throw blanket for comfort and style.",
+    "image": ""
+  },
+  {
+    "name": "Gluten-Free Snack Pack",
+    "product_id": 25,
+    "merchant_id": 9,
+    "description": "Assorted gluten-free snacks for guilt-free and delicious munching.",
+    "image": ""
+  },
+  {
+    "name": "Organic Green Tea",
+    "product_id": 26,
+    "merchant_id": 9,
+    "description": "Premium organic green tea for a refreshing and healthy beverage.",
+    "image": ""
+  },
+  {
+    "name": "Raw Almond Butter",
+    "product_id": 27,
+    "merchant_id": 9,
+    "description": "Smooth and nutritious raw almond butter for healthy snacking.",
+    "image": ""
+  },
+  {
+    "name": "Electric Guitar",
+    "product_id": 28,
+    "merchant_id": 10,
+    "description": "Classic and versatile electric guitar for melodic music creation.",
+    "image": ""
+  },
+  {
+    "name": "Vinyl Record Player",
+    "product_id": 29,
+    "merchant_id": 10,
+    "description": "Vintage-style vinyl record player for nostalgic and high-quality music playback.",
+    "image": ""
+  },
+  {
+    "name": "MIDI Keyboard Controller",
+    "product_id": 30,
+    "merchant_id": 10,
+    "description": "Versatile MIDI keyboard controller for producing and composing music.",
+    "image": ""
+  },
+  {
+    "name": "Vintage Space-themed Posters",
+    "product_id": 31,
+    "merchant_id": 11,
+    "description": "Authentic and collectible vintage space-themed posters for decor.",
+    "image": ""
+  },
+  {
+    "name": "Collectible Star Wars Figures",
+    "product_id": 32,
+    "merchant_id": 11,
+    "description": "Rare and collectible Star Wars action figures for enthusiasts and fans.",
+    "image": ""
+  },
+  {
+    "name": "Crystal Ball with Stand",
+    "product_id": 33,
+    "merchant_id": 11,
+    "description": "Mystical and decorative crystal ball with an elegant stand for ambiance.",
+    "image": ""
+  },
+  {
+    "name": "Resistance Bands Set",
+    "product_id": 34,
+    "merchant_id": 12,
+    "description": "Diverse and effective resistance bands set for versatile workout routines.",
+    "image": ""
+  },
+  {
+    "name": "Fitness Tracker Watch",
+    "product_id": 35,
+    "merchant_id": 12,
+    "description": "Smart and feature-rich fitness tracker watch for monitoring activities.",
+    "image": ""
+  },
+  {
+    "name": "Yoga Blocks and Strap Set",
+    "product_id": 36,
+    "merchant_id": 12,
+    "description": "Supportive and durable yoga blocks and strap set for yoga practitioners.",
+    "image": ""
+  },
+  {
+    "name": "Cast Iron Skillet",
+    "product_id": 37,
+    "merchant_id": 13,
+    "description": "Versatile and durable cast iron skillet for cooking a variety of dishes.",
+    "image": ""
+  },
+  {
+    "name": "Chef's Knife Set",
+    "product_id": 38,
+    "merchant_id": 13,
+    "description": "Professional-grade chef's knife set for precise and efficient meal preparation.",
+    "image": ""
+  },
+  {
+    "name": "Silicone Baking Mats",
+    "product_id": 39,
+    "merchant_id": 13,
+    "description": "Non-stick and reusable silicone baking mats for hassle-free baking.",
+    "image": ""
+  },
+  {
+    "name": "Educational Robot Kit",
+    "product_id": 40,
+    "merchant_id": 14,
+    "description": "Interactive and educational robot kit for kids to learn programming and robotics.",
+    "image": ""
+  },
+  {
+    "name": "Interactive Learning Tablet",
+    "product_id": 41,
+    "merchant_id": 14,
+    "description": "Engaging and educational tablet for children's learning and entertainment.",
+    "image": ""
+  }
+]
