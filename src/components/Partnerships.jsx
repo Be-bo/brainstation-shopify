@@ -1,10 +1,7 @@
-import PartnershipCard from "./AddPartnerships";
-
 const Partnerships = () => {
   return (
     <section className="shop">
-      <PartnershipCard />
-      <p>test</p>
+      ¥<p>test</p>
     </section>
   );
 };
