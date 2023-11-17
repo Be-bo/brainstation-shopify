@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.partnership-card {
+  padding: 1rem 0;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: space-evenly;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__container-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+  }
+  &__name-container {
+    padding-left: 1rem;
+  }
+  &__img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: green;
+  }
+
+  &__container-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid black;
+  }
+
+  &__arrow {
+    height: 40px;
+    width: 40px;
+  }
+
+  &__product-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__product-img {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+  }
+  &__description-container {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  &__text--category {
+    background-color: cadetblue;
+    text-align: center;
+    padding: 0.3rem;
+    border-radius: 50px;
+  }
+  &__btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+  }
+  &__btn {
+    background-color: black;
+    color: white;
+    padding: 0.2rem 1.3rem;
+    border-radius: 5px;
+    border: none;
+  }
+}
