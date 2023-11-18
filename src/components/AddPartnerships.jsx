@@ -48,7 +48,6 @@ function AddPartnerships() {
           ]
         );
       }
-
       setCurrentMerchants(temp);
     }
     fetchData();
@@ -115,7 +114,7 @@ function AddPartnerships() {
             </div>
             <div className="mainbody__title">Suggested Merchant</div>
             {currentMerchants?.map((merchant, index) => (
-              <PartnershipCard merchant={merchant} />
+              <PartnershipCard key={merchant.merchant_id} merchant={merchant} />
             ))}
           </div>
         </div>

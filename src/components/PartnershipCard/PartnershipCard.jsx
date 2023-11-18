@@ -1,23 +1,21 @@
 import "./PartnershipCard.scss";
 import leftBlackArrow from "../../assets/images/leftarrow.jpg";
 import rightBlackArrow from "../../assets/images/rightarrow.jpg";
+import bag from "../../assets/images/product.png";
 import axios from 'axios';
+import { useEffect, useState } from "react";
 
 const PartnershipCard = ({merchant}) => {
-  // const [productsData, setProductData] = useState([]);
-  // //get single prodct data from backend
+  const [products, setProducts] = useState();
+  const [currentIndex, setCurrentIndex] = useState(parseInt(1));
 
-  // // get all productsData from Json file on frontend
-  // // do I need a truth of data on ShoppingPage?
-  // useEffect(() => {
-  //   const getProductsData = async () => {
-  //     const response = await axios.get(`http://localhost:8085/shopping`);
-  //     setProductData(response.data);
-  //     // setSelectedProduct(response.data[0]);
-  //   };
-  //   getProductsData();
-  //   // console.log(productsData);
-  // }, []);
+  useEffect(() =>{
+    async function fetchData(){
+      const productsResponse = await axios.get(`http://3.20.237.64:80/merchant/products/${merchant.merchant_id}`);
+      setProducts(productsResponse.data);
+    }
+    fetchData();
+  });
 
   const addPartner = async () => {
     let newPartnership = {
@@ -29,16 +27,30 @@ const PartnershipCard = ({merchant}) => {
     console.log(response);
   }
 
+  const shiftLeft = () =>{
+    let temp = currentIndex - 1;
+    if(currentIndex < 1) temp = 0;
+    setCurrentIndex(temp);
+    console.log(temp);
+  }
+
+  const shiftRight = () =>{
+    let temp = currentIndex + 1;
+    if(currentIndex > 1) temp = 2;
+    setCurrentIndex(temp);
+    console.log(temp);
+  }
+
   return (
     <section className="partnership-card">
       <div className="partnership-card__wrapper">
         <div className="partnership-card__container-left">
           <div className="partnership-card__img-container">
-            <img className="partnership-card__img" src={merchant.logo} alt="Logo" />
+            <img className="partnership-card__img" src={merchant?.logo} alt="Logo" />
           </div>
           <div className="partnership-card__name-container">
-            <p className="partnership-card__name">{merchant.name}</p>
-            <p className="partnership-card__description">{merchant.description}</p>
+            <p className="partnership-card__name">{merchant?.name}</p>
+            <p className="partnership-card__description">{merchant?.description}</p>
           </div>
         </div>
         <div className="partnership-card__container-right">
@@ -48,27 +60,29 @@ const PartnershipCard = ({merchant}) => {
                 className="partnership-card__arrow"
                 src={leftBlackArrow}
                 alt="leftArrow"
+                onClick={()=>shiftLeft()}
               />
             </div>
             <div className="partnership-card__product-container">
               <img
                 className="partnership-card__product-img"
-                src=""
+                src={products && products.length > currentIndex ? products[currentIndex]?.image : bag}
                 alt="product img"
               />
             </div>
             <div className="partnership-card__description-container">
-              <p className="partnership-card__productName">Product Name</p>
+              <p className="partnership-card__productName">{products && products.length > currentIndex ? products[currentIndex]?.name : "Product Name"}</p>
               <p className="partnership-card__description">
-                product description
+                {products && products.length > currentIndex ? products[currentIndex]?.description : "Product Description"}
               </p>
-              <p className="partnership-card__categoryButton">Category</p>
+              {/* <p className="partnership-card__categoryButton">Category</p> */}
             </div>
             <div className="partnership-card__arrow-container">
               <img
                 className="partnership-card__arrow"
                 src={rightBlackArrow}
                 alt="leftArrow"
+                onClick={()=>shiftRight()}
               />
             </div>
           </div>
