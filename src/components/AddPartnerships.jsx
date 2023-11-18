@@ -112,7 +112,7 @@ function AddPartnerships() {
                 ))}
               </select>
             </div>
-            <div className="mainbody__title">Suggested Merchant</div>
+            <div className="mainbody__title">Suggested Merchants</div>
             {currentMerchants?.map((merchant, index) => (
               <PartnershipCard key={merchant.merchant_id} merchant={merchant} />
             ))}

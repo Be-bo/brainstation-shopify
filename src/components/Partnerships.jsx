@@ -40,14 +40,16 @@ function Partnerships() {
               <div className="mainbody__info-row1">
                 <ul className="mainbody__info-list">
                   <li className="mainbody__list-item">Store</li>
-                  <li className="mainbody__list-item">Status</li>
+                  {/* <li className="mainbody__list-item">Status</li> */}
                 </ul>
                 <ul className="mainbody__product-list">
                   {partnershipData?.map((item, index) => (
                     <React.Fragment key={index}>
                       <li className="mainbody__product-item">
+                        <img className="mainbody__logo" src="http://3.20.237.64:80/public/logo.png"></img>
                         <p className="mainbody__itemname">{item.name}</p>
                         <p className="mainbody__itemstatus">{item.status}</p>
+                        <p className="mainbody__button mainbody__linkbtn">See Performance</p>
                       </li>
                     </React.Fragment>
                   ))}
